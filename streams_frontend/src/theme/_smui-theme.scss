@@ -1,0 +1,20 @@
+//
+// MDC Theme
+//
+
+@import "@material/theme/color-palette";
+
+$mdc-theme-background: #000;
+
+$mdc-theme-primary: #3431be;
+$mdc-theme-on-primary: #e0e0e0;
+
+$mdc-theme-secondary: #e0e0e0;
+$mdc-theme-on-secondary: black;
+
+$mdc-theme-surface: #222;
+$mdc-theme-on-surface: black;
+
+$mdc-theme-text-primary-on-dark: violet;
+$mdc-theme-text-primary-on-light: green;
+$mdc-theme-error: $material-color-red-900;

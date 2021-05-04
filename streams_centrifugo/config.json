@@ -1,0 +1,22 @@
+{
+  "presence": true,
+  "namespaces": [
+    {
+      "name": "chat",
+      "history_recover": true,
+      "history_size": 15,
+      "history_lifetime": 300,
+      "anonymous": false,
+      "presence": true
+    },
+    {
+      "name": "channel",
+      "presence": true,
+      "presence_stats": true
+    },
+    {
+      "name": "chunks",
+      "anonymous": false
+    }
+  ]
+}

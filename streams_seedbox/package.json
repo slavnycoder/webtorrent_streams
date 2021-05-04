@@ -1,0 +1,19 @@
+{
+  "name": "streams_seedbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node client.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bittorrent-tracker": "^9.14.4",
+    "centrifuge": "^2.2.3",
+    "webtorrent": "^0.107.17",
+    "webtorrent-hybrid": "^4.0.1"
+  }
+}

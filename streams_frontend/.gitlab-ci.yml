@@ -1,0 +1,30 @@
+image: node:latest
+
+.now-install: &now-install
+  before_script:
+    - npm i -g now --silent
+
+stages:
+  - prod-deploy
+  - dev-deploy
+
+prod_deploy:
+  stage: prod-deploy
+  <<: *now-install
+  script:
+    - echo "export const https_host = '$PRODUCTION_HTTPS_HOST';" > src/host.js
+    - echo "export const wss_host = '$PRODUCTION_WSS_HOST';" >> src/host.js
+    - now -t ${NOW_TOKEN} --prod --confirm
+  only:
+    - master
+
+dev_deploy:
+  stage: dev-deploy
+  <<: *now-install
+  script:
+    - echo "export const https_host = '$DEVELOP_HTTPS_HOST';" > src/host.js
+    - echo "export const wss_host = '$DEVELOP_WSS_HOST';" >> src/host.js
+    - now -t ${NOW_TOKEN} --confirm
+  only:
+    - master
+    - develop
